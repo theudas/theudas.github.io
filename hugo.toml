@@ -1,6 +1,6 @@
 baseURL = 'https://theudas.github.io/'
 languageCode = 'zh-cn'
-title = 'Theudas的博客'
+title = 'theudas的博客'
 theme = 'papermod'
 
 [params]
@@ -24,7 +24,7 @@ comments = false                             # 是否启用评论系统（可后
 # 主页模式设置
 [params.homeMode]
 enabled = true                                # 启用主页模式
-title = "欢迎来到 Theudas 的博客"               # 主页标题
+title = "欢迎来到 theudas 的博客"               # 主页标题
 subtitle = "分享技术、生活和思考"                # 主页副标题
 imageUrl = "img/avatar.jpg"                   # 主页图片
 imageWidth = 150                              # 图片宽度
@@ -32,39 +32,39 @@ imageHeight = 150                             # 图片高度
 
 [[params.socialIcons]]
 name = "github"
-url = "https://github.com/Theudas"
+url = "https://github.com/theudas"
 
 
 # 菜单配置
 [[menu.main]]
 identifier = 'home'
-name = '首页'
+name = 'Home'
 url = '/'
 weight = 10
 
 [[menu.main]]
 identifier = 'posts'
-name = '文章'
-url = '/post/'
+name = 'Posts'
+url = '/posts/'
 weight = 20
 
 [[menu.main]]
 identifier = 'categories'
-name = '分类'
+name = 'Categories'
 url = '/categories/'
 weight = 30
 
-# [[menu.main]]
-# identifier = 'tags'
-# name = '标签'
-# url = '/tags/'
-# weight = 40
+[[menu.main]]
+identifier = 'tags'
+name = 'Tags'
+url = '/tags/'
+weight = 40
 
-# [[menu.main]]
-# identifier = 'about'
-# name = '关于'
-# url = '/about/'
-# weight = 50
+[[menu.main]]
+identifier = 'about'
+name = 'About'
+url = '/about/'
+weight = 50
 
 # 搜索配置
 [params.fuseOpts]
