@@ -1,27 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>theudas的博客</title><link>https://theudas.github.io/</link><description>Recent content on theudas的博客</description><generator>Hugo -- 0.155.2</generator><language>zh-cn</language><lastBuildDate>Sun, 08 Feb 2026 14:16:13 +0800</lastBuildDate><atom:link href="https://theudas.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>About Me</title><link>https://theudas.github.io/about/</link><pubDate>Sun, 08 Feb 2026 14:16:13 +0800</pubDate><guid>https://theudas.github.io/about/</guid><description>&lt;h3 id="-hey-there"&gt;👋 Hey there!&lt;/h3&gt;
-&lt;p&gt;I&amp;rsquo;m Ruoying Tan. A passionate developer and graduate student dedicated to building efficient systems and exploring the frontiers of technology.&lt;/p&gt;
-&lt;h4 id="-education"&gt;🔍 Education&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Peking University (PKU)&lt;/strong&gt; | School of Software and Microelectronics
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Master of Engineering&lt;/em&gt; | 2025 – 2028 (Expected)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Beijing University of Posts and Telecommunications (BUPT)&lt;/strong&gt; | School of Computer Science
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Bachelor of Engineering&lt;/em&gt; | 2021 – 2025&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="-tech-stack"&gt;💻 Tech Stack&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Languages&lt;/strong&gt;: C/C++, Python&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tools &amp;amp; Frameworks&lt;/strong&gt;:&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Fields of Interest&lt;/strong&gt;:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="-life--interests"&gt;🎲 Life &amp;amp; Interests&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Motto&lt;/strong&gt;: &amp;ldquo;Stay hungry, stay foolish&amp;rdquo;——embracing the unknown with curiosity.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Running&lt;/strong&gt;: Coding is my mental sprint; running is my physical discipline. I find clarity in the rhythm of the road.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Off-duty&lt;/strong&gt;: Stepping out of the 0/1 logic to explore the tangible world on foot.&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ruoying Tan</title>
+    <link>https://theudas.github.io/</link>
+    <description>Recent content on Ruoying Tan</description>
+    <image>
+      <title>Ruoying Tan</title>
+      <url>https://theudas.github.io/images/papermod-cover.png</url>
+      <link>https://theudas.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <copyright>PaperMod Contributors</copyright>
+    <atom:link href="https://theudas.github.io/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
