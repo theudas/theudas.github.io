@@ -97,7 +97,7 @@ params:
     Title: "About Me"
     Content: >
       #### 👋 Hey there!
-      
+
       I'm Ruoying Tan. A passionate developer and graduate student dedicated to building efficient systems and exploring the frontiers of technology.
 
       #### 🎓 Education
@@ -123,7 +123,7 @@ params:
       url: "https://space.bilibili.com/397732151"
 
   editPost:
-    URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+    URL: "https://github.com/theudas/theudas.github.io/tree/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
