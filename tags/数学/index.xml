@@ -15,23 +15,30 @@
     <lastBuildDate>Wed, 25 Feb 2026 21:44:13 +0800</lastBuildDate>
     <atom:link href="https://theudas.github.io/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mathematical Proof Problem 1</title>
+      <title>不等式证明</title>
       <link>https://theudas.github.io/posts/mathematical-proof-problem-1/</link>
       <pubDate>Wed, 25 Feb 2026 21:44:13 +0800</pubDate>
       <guid>https://theudas.github.io/posts/mathematical-proof-problem-1/</guid>
       <description>&lt;h2 id=&#34;题目描述&#34;&gt;题目描述&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;已知：&lt;/strong&gt; $a &amp;gt; 0, b &amp;gt; 0$ 且 $a + b = 2$。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;求证：&lt;/strong&gt; $\sqrt{a+1} + \sqrt{b+1} \le 2\sqrt{2}$。&lt;/p&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;证明过程&#34;&gt;证明过程&lt;/h2&gt;
-&lt;h3 id=&#34;方法一利用柯西不等式-cauchy-schwarz-inequality&#34;&gt;方法一：利用柯西不等式 (Cauchy-Schwarz Inequality)&lt;/h3&gt;
-&lt;p&gt;这是最直接的方法。根据柯西不等式的形式：&lt;/p&gt;
+&lt;h3 id=&#34;方法一利用最基础的代数运算性质&#34;&gt;方法一：利用最基础的代数运算性质&lt;/h3&gt;
+&lt;p&gt;要证：$\sqrt{a+1}+\sqrt{b+1} \le 2\sqrt{2}$&lt;/p&gt;
+&lt;p&gt;即证：$(\sqrt{a+1}+\sqrt{b+1})^2 \le (2\sqrt{2})^2$&lt;/p&gt;
+&lt;p&gt;化简可得：$a+1+2\sqrt{(a+1)(b+1)}+b+1 \le 8$&lt;/p&gt;
+&lt;p&gt;整理可得：$a+b+2+2\sqrt{ab+a+b+1} \le 8$&lt;/p&gt;
+&lt;p&gt;代入$a+b=2$可得：$4+2\sqrt{ab+3} \le 8$&lt;/p&gt;
+&lt;p&gt;即$\sqrt{ab+3} \le 2$&lt;/p&gt;
+&lt;p&gt;两边平方可得：$ab \le 1$&lt;/p&gt;
+&lt;p&gt;代入$a+b=2$可得：$a(2-a) \le 1$&lt;/p&gt;
+&lt;p&gt;由于$a&amp;gt;0$且$b=2-a&amp;gt;0$，故$0&amp;lt;a&amp;lt;2$&lt;/p&gt;
+&lt;p&gt;由二次函数单调性可知当$a=1$时$a(2-a)$最大值为1&lt;/p&gt;
+&lt;p&gt;即$a(2-a) \le 1$成立，原不等式得证&lt;/p&gt;
+&lt;h3 id=&#34;方法二利用柯西不等式-cauchy-schwarz-inequality&#34;&gt;方法二：利用柯西不等式 (Cauchy-Schwarz Inequality)&lt;/h3&gt;
+&lt;p&gt;根据柯西不等式：&lt;/p&gt;
 &lt;p&gt;$$(x_1y_1 + x_2y_2)^2 \le (x_1^2 + x_2^2)(y_1^2 + y_2^2)$$&lt;/p&gt;
-&lt;p&gt;令 $x_1 = \sqrt{a+1}, x_2 = \sqrt{b+1}$，且 $y_1 = 1, y_2 = 1$。&lt;/p&gt;
-&lt;p&gt;代入公式：&lt;/p&gt;
-&lt;p&gt;$$(\sqrt{a+1} \cdot 1 + \sqrt{b+1} \cdot 1)^2 \le [(\sqrt{a+1})^2 + (\sqrt{b+1})^2] \cdot (1^2 + 1^2)$$&lt;/p&gt;
-&lt;p&gt;简化等式右侧：&lt;/p&gt;
-&lt;p&gt;$$(\sqrt{a+1} + \sqrt{b+1})^2 \le (a + 1 + b + 1) \cdot 2$$&lt;/p&gt;</description>
+&lt;p&gt;令 $x_1 = \sqrt{a+1}, x_2 = \sqrt{b+1}$, $y_1 = 1, y_2 = 1$。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
