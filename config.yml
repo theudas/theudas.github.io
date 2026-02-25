@@ -64,6 +64,8 @@ params:
   author: theudas
   # author: ["Me", "You"] # multiple authors
 
+  math: true
+
   defaultTheme: auto
   # disableThemeToggle: true
   ShowShareButtons: true
