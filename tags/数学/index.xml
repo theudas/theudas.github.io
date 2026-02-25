@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>数学 on Ruoying Tan</title>
+    <link>https://theudas.github.io/tags/%E6%95%B0%E5%AD%A6/</link>
+    <description>Recent content in 数学 on Ruoying Tan</description>
+    <image>
+      <title>Ruoying Tan</title>
+      <url>https://theudas.github.io/images/papermod-cover.png</url>
+      <link>https://theudas.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <copyright>PaperMod Contributors</copyright>
+    <lastBuildDate>Wed, 25 Feb 2026 21:44:13 +0800</lastBuildDate>
+    <atom:link href="https://theudas.github.io/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mathematical Proof Problem 1</title>
+      <link>https://theudas.github.io/posts/mathematical-proof-problem-1/</link>
+      <pubDate>Wed, 25 Feb 2026 21:44:13 +0800</pubDate>
+      <guid>https://theudas.github.io/posts/mathematical-proof-problem-1/</guid>
+      <description>&lt;h2 id=&#34;题目描述&#34;&gt;题目描述&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;已知：&lt;/strong&gt; $a &amp;gt; 0, b &amp;gt; 0$ 且 $a + b = 2$。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;求证：&lt;/strong&gt; $\sqrt{a+1} + \sqrt{b+1} \le 2\sqrt{2}$。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;证明过程&#34;&gt;证明过程&lt;/h2&gt;
+&lt;h3 id=&#34;方法一利用柯西不等式-cauchy-schwarz-inequality&#34;&gt;方法一：利用柯西不等式 (Cauchy-Schwarz Inequality)&lt;/h3&gt;
+&lt;p&gt;这是最直接的方法。根据柯西不等式的形式：&lt;/p&gt;
+&lt;p&gt;$$(x_1y_1 + x_2y_2)^2 \le (x_1^2 + x_2^2)(y_1^2 + y_2^2)$$&lt;/p&gt;
+&lt;p&gt;令 $x_1 = \sqrt{a+1}, x_2 = \sqrt{b+1}$，且 $y_1 = 1, y_2 = 1$。&lt;/p&gt;
+&lt;p&gt;代入公式：&lt;/p&gt;
+&lt;p&gt;$$(\sqrt{a+1} \cdot 1 + \sqrt{b+1} \cdot 1)^2 \le [(\sqrt{a+1})^2 + (\sqrt{b+1})^2] \cdot (1^2 + 1^2)$$&lt;/p&gt;
+&lt;p&gt;简化等式右侧：&lt;/p&gt;
+&lt;p&gt;$$(\sqrt{a+1} + \sqrt{b+1})^2 \le (a + 1 + b + 1) \cdot 2$$&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
