@@ -1,9 +1,10 @@
-+++
-date = '2026-02-25T14:50:38+08:00'
-draft = false
-title = '2025年寒假英语作文'
-tags = ['英语', '高考', '作文']
-+++
+---
+author: Ruoying Tan
+date: '2026-02-25T14:50:38+08:00'
+draft: false
+title: '2025年寒假英语作文'
+tags: ['英语', '高考', '作文']
+---
 
 ## 应用文 - Should We Establish a Graffiti Wall?
 ### 题目
