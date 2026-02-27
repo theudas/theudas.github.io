@@ -40,30 +40,20 @@ tags: ['数学', '高考', '证明题']
 
 ### 方法二：利用柯西不等式 (Cauchy-Schwarz Inequality)
 
-根据柯西不等式：
-
-$$(x_1y_1 + x_2y_2)^2 \le (x_1^2 + x_2^2)(y_1^2 + y_2^2)$$
+根据柯西不等式：$(x_1y_1 + x_2y_2)^2 \le (x_1^2 + x_2^2)(y_1^2 + y_2^2)$
 
 令 $x_1 = \sqrt{a+1}, x_2 = \sqrt{b+1}$, $y_1 = 1, y_2 = 1$。
 
-代入公式可得：
-
-$$(\sqrt{a+1} \cdot 1 + \sqrt{b+1} \cdot 1)^2 \le [(\sqrt{a+1})^2 + (\sqrt{b+1})^2] \cdot (1^2 + 1^2)$$
+代入公式可得：$(\sqrt{a+1} \cdot 1 + \sqrt{b+1} \cdot 1)^2 \le [(\sqrt{a+1})^2 + (\sqrt{b+1})^2] \cdot (1^2 + 1^2)$
 
 
-化简不等式可得：
-
-$$(\sqrt{a+1} + \sqrt{b+1})^2 \le (a + 1 + b + 1) \cdot 2$$
+化简不等式可得：$(\sqrt{a+1} + \sqrt{b+1})^2 \le (a + 1 + b + 1) \cdot 2$
 
 
-已知 $a + b = 2$，则：
-
-$$(\sqrt{a+1} + \sqrt{b+1})^2 \le (2 + 2) \cdot 2 = 8$$
+代入 $a + b = 2$，则：$(\sqrt{a+1} + \sqrt{b+1})^2 \le (2 + 2) \cdot 2 = 8$
 
 
-由于左侧大于0，两边同时开平方根可得：
-
-$$\sqrt{a+1} + \sqrt{b+1} \le \sqrt{8} = 2\sqrt{2}$$
+由于左侧大于0，两边同时开平方根可得：$\sqrt{a+1} + \sqrt{b+1} \le \sqrt{8} = 2\sqrt{2}$
 
 当且仅当 $\frac{\sqrt{a+1}}{1} = \frac{\sqrt{b+1}}{1}$，即 $a = b = 1$ 时等号成立
 
@@ -76,24 +66,16 @@ $$\sqrt{a+1} + \sqrt{b+1} \le \sqrt{8} = 2\sqrt{2}$$
 
 令 $x = \sqrt{a+1}, y = \sqrt{b+1}$。
 
-根据不等式可得：
-
-$$\frac{\sqrt{a+1} + \sqrt{b+1}}{2} \le \sqrt{\frac{(\sqrt{a+1})^2 + (\sqrt{b+1})^2}{2}}$$
+根据不等式可得：$\frac{\sqrt{a+1} + \sqrt{b+1}}{2} \le \sqrt{\frac{(\sqrt{a+1})^2 + (\sqrt{b+1})^2}{2}}$
 
 
-简化不等式可得：
-
-$$\frac{\sqrt{a+1} + \sqrt{b+1}}{2} \le \sqrt{\frac{a + 1 + b + 1}{2}} = \sqrt{\frac{a + b + 2}{2}}$$
+简化不等式可得：$\frac{\sqrt{a+1} + \sqrt{b+1}}{2} \le \sqrt{\frac{a + 1 + b + 1}{2}} = \sqrt{\frac{a + b + 2}{2}}$
 
 
-代入 $a + b = 2$ 可得：
-
-$$\frac{\sqrt{a+1} + \sqrt{b+1}}{2} \le \sqrt{\frac{2 + 2}{2}} = \sqrt{2}$$
+代入 $a + b = 2$ 可得：$\frac{\sqrt{a+1} + \sqrt{b+1}}{2} \le \sqrt{\frac{2 + 2}{2}} = \sqrt{2}$
 
 
-两边同乘以2：
-
-$$\sqrt{a+1} + \sqrt{b+1} \le 2\sqrt{2}$$
+两边同乘以2：$\sqrt{a+1} + \sqrt{b+1} \le 2\sqrt{2}$
 
 当且仅当 $a+1 = b+1$，即 $a = b = 1$ 时等号成立
 
