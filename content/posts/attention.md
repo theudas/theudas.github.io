@@ -158,6 +158,14 @@ class GroupQueryAttention(nn.Module):
             .expand(batch_size, -1, self.num_groups, self.num_heads // self.num_groups, self.head_dim)
             .reshape(batch_size, -1, self.num_heads, self.head_dim)
             .transpose(1, 2))
+        """
+        # 直接写成下面这种方法更简洁
+        k = self.k_proj(x).view(batch_size, -1, self.num_groups, self.head_dim).transpose(1, 2)
+        v = self.v_proj(x).view(batch_size, -1, self.num_groups, self.head_dim).transpose(1, 2)
+        
+        k = k.repeat_interleave(self.num_heads // self.num_groups, dim=1)
+        v = v.repeat_interleave(self.num_heads // self.num_groups, dim=1)
+        """
 
         # 计算 Attention
         attn_scores = q @ k.transpose(-2, -1) / math.sqrt(self.head_dim)
