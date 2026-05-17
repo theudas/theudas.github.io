@@ -16,9 +16,9 @@
     <atom:link href="https://theudas.github.io/tags/%E8%AF%81%E6%98%8E%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>不等式证明</title>
-      <link>https://theudas.github.io/posts/mathematical-proof-problem-1/</link>
+      <link>https://theudas.github.io/posts/mathematical-proof-1/</link>
       <pubDate>Wed, 25 Feb 2026 21:44:13 +0800</pubDate>
-      <guid>https://theudas.github.io/posts/mathematical-proof-problem-1/</guid>
+      <guid>https://theudas.github.io/posts/mathematical-proof-1/</guid>
       <description>&lt;h2 id=&#34;题目描述&#34;&gt;题目描述&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;已知：&lt;/strong&gt; $a &amp;gt; 0, b &amp;gt; 0$ 且 $a + b = 2$。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;求证：&lt;/strong&gt; $\sqrt{a+1} + \sqrt{b+1} \le 2\sqrt{2}$。&lt;/p&gt;
