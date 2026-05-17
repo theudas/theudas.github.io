@@ -4,14 +4,6 @@ body {
     font-family: "Times New Roman", Times, "Songti SC", "STSong", "SimSun", serif;
 }
 
-:lang(zh),
-:lang(zh-CN),
-:lang(zh-Hans),
-:lang(zh-TW),
-:lang(zh-Hant) {
-    font-family: "Songti SC", "STSong", "SimSun", serif;
-}
-
 code,
 kbd,
 samp,
@@ -29,6 +21,90 @@ iframe {
 
 .home-info ul {
     padding-inline-start: 20px;
+}
+
+.home-info-copy {
+    display: none;
+}
+
+.home-info-copy.is-active {
+    display: block;
+}
+
+.menu-lang-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.menu-lang-toggle,
+.menu-lang-toggle .lang-pill-toggle {
+    visibility: visible;
+}
+
+.lang-pill-toggle {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 4px;
+    min-width: 112px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--theme);
+}
+
+#menu .menu-lang-toggle {
+    margin-inline-start: var(--gap);
+}
+
+.lang-pill-thumb {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+    border-radius: 999px;
+    background: var(--primary);
+    transition: transform 0.22s ease;
+}
+
+.lang-pill-toggle[data-current-lang="zh"] .lang-pill-thumb {
+    transform: translateX(100%);
+}
+
+.lang-pill-option {
+    position: relative;
+    z-index: 1;
+    padding: 6px 14px;
+    border: 0;
+    background: transparent;
+    color: var(--secondary);
+    font: inherit;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.22s ease;
+}
+
+.lang-pill-option.is-active {
+    color: var(--theme);
+}
+
+.lang-pill-option:focus-visible {
+    outline: none;
+}
+
+.lang-pill-toggle:has(.lang-pill-option:focus-visible) {
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+@media (max-width: 768px) {
+    .lang-pill-toggle {
+        min-width: 96px;
+    }
+
+    .lang-pill-option {
+        padding: 6px 12px;
+    }
 }
 
 .entry-cover img {

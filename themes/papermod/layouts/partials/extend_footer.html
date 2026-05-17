@@ -1,3 +1,153 @@
 {{- /* Footer custom content area start */ -}}
 {{- /*     Insert any custom code web-analytics, resources, etc. here */ -}}
+<script>
+    (function () {
+        function initSiteLanguageToggle() {
+            var key = "home-info-lang";
+            var defaultLang = "{{ site.Params.homeInfoParams.defaultLang | default "zh" }}";
+            var toggle = document.getElementById("home-info-lang-toggle");
+            var options = toggle ? toggle.querySelectorAll(".lang-pill-option") : [];
+            var pageCopy = {
+                archiveTitle: { en: "Archive", zh: "归档" },
+                searchTitle: { en: "Search", zh: "查找" },
+                tagsTitle: { en: "Tags", zh: "标签" }
+            };
+            var monthMap = {
+                January: "1月",
+                February: "2月",
+                March: "3月",
+                April: "4月",
+                May: "5月",
+                June: "6月",
+                July: "7月",
+                August: "8月",
+                September: "9月",
+                October: "10月",
+                November: "11月",
+                December: "12月"
+            };
+
+            function getStoredLang() {
+                try {
+                    return localStorage.getItem(key);
+                } catch (error) {
+                    return null;
+                }
+            }
+
+            function setStoredLang(lang) {
+                try {
+                    localStorage.setItem(key, lang);
+                } catch (error) {
+                }
+            }
+
+            function formatArchiveDate(iso, lang) {
+                var date = new Date(iso);
+                if (Number.isNaN(date.getTime())) return null;
+
+                return new Intl.DateTimeFormat(lang === "zh" ? "zh-CN" : "en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                }).format(date);
+            }
+
+            function syncDocumentTitle(lang) {
+                var path = window.location.pathname.replace(/\/+$/, "") || "/";
+                var siteTitle = "{{ site.Title }}";
+                var titleMap = {
+                    "/archives": lang === "zh" ? "归档" : "Archive",
+                    "/search": lang === "zh" ? "查找" : "Search",
+                    "/tags": lang === "zh" ? "标签" : "Tags"
+                };
+
+                if (titleMap[path]) {
+                    document.title = titleMap[path] + " | " + siteTitle;
+                }
+            }
+
+            function applyLang(lang) {
+                var pageNodes;
+                var i;
+
+                document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+
+                pageNodes = document.querySelectorAll(".home-info-copy");
+                for (i = 0; i < pageNodes.length; i += 1) {
+                    pageNodes[i].classList.toggle("is-active", pageNodes[i].dataset.lang === lang);
+                }
+
+                pageNodes = document.querySelectorAll("[data-nav-key]");
+                for (i = 0; i < pageNodes.length; i += 1) {
+                    var link = pageNodes[i];
+                    var label = lang === "zh" ? link.dataset.navZh : link.dataset.navEn;
+                    var title = lang === "zh" ? link.dataset.navTitleZh : link.dataset.navTitleEn;
+                    var span = link.querySelector("span");
+
+                    if (span && label) span.textContent = label;
+                    if (title) link.setAttribute("title", title);
+                }
+
+                pageNodes = document.querySelectorAll("[data-page-key]");
+                for (i = 0; i < pageNodes.length; i += 1) {
+                    var node = pageNodes[i];
+                    var entry = pageCopy[node.dataset.pageKey];
+                    if (entry) node.textContent = lang === "zh" ? entry.zh : entry.en;
+                }
+
+                pageNodes = document.querySelectorAll(".archive-month-name[data-month-en]");
+                for (i = 0; i < pageNodes.length; i += 1) {
+                    var monthNode = pageNodes[i];
+                    var monthEn = monthNode.dataset.monthEn;
+                    monthNode.textContent = lang === "zh" ? (monthMap[monthEn] || monthEn) : monthEn;
+                }
+
+                pageNodes = document.querySelectorAll(".post-meta-date[data-date-iso]");
+                for (i = 0; i < pageNodes.length; i += 1) {
+                    var dateNode = pageNodes[i];
+                    var formatted = formatArchiveDate(dateNode.dataset.dateIso, lang);
+                    if (formatted) dateNode.textContent = formatted;
+                }
+
+                var searchInput = document.getElementById("searchInput");
+                if (searchInput) {
+                    searchInput.placeholder = lang === "zh" ? searchInput.dataset.placeholderZh : searchInput.dataset.placeholderEn;
+                    searchInput.setAttribute("aria-label", lang === "zh" ? "查找" : "search");
+                }
+
+                if (toggle) {
+                    toggle.setAttribute("data-current-lang", lang);
+                    for (i = 0; i < options.length; i += 1) {
+                        var option = options[i];
+                        var isActive = option.dataset.lang === lang;
+                        option.classList.toggle("is-active", isActive);
+                        option.setAttribute("aria-selected", isActive ? "true" : "false");
+                    }
+                }
+
+                syncDocumentTitle(lang);
+            }
+
+            var initialLang = getStoredLang() || defaultLang;
+            applyLang(initialLang);
+
+            if (!toggle) return;
+
+            for (var i = 0; i < options.length; i += 1) {
+                options[i].addEventListener("click", function () {
+                    var nextLang = this.dataset.lang;
+                    applyLang(nextLang);
+                    setStoredLang(nextLang);
+                });
+            }
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", initSiteLanguageToggle);
+        } else {
+            initSiteLanguageToggle();
+        }
+    })();
+</script>
 {{- /* Footer custom content area end */ -}}

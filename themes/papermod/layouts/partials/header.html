@@ -88,6 +88,9 @@
             {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
             <li>
                 <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
+                {{- if eq .URL "archives/" }} data-nav-key="archive" data-nav-en="Archive" data-nav-zh="归档" data-nav-title-en="Archive" data-nav-title-zh="归档"{{- end }}
+                {{- if eq .URL "search/" }} data-nav-key="search" data-nav-en="Search" data-nav-zh="查找" data-nav-title-en="Search (Alt + /)" data-nav-title-zh="查找 (Alt + /)"{{- end }}
+                {{- if eq .URL "tags/" }} data-nav-key="tags" data-nav-en="Tags" data-nav-zh="标签" data-nav-title-en="Tags" data-nav-title-zh="标签"{{- end }}
                 {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
                     <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
                         {{- .Pre }}
@@ -105,6 +108,13 @@
                 </a>
             </li>
             {{- end }}
+            <li class="menu-lang-toggle">
+                <div id="home-info-lang-toggle" class="lang-pill-toggle" role="tablist" aria-label="Switch profile language">
+                    <span class="lang-pill-thumb" aria-hidden="true"></span>
+                    <button class="lang-pill-option" type="button" data-lang="en" role="tab" aria-selected="false">EN</button>
+                    <button class="lang-pill-option" type="button" data-lang="zh" role="tab" aria-selected="true">中文</button>
+                </div>
+            </li>
         </ul>
     </nav>
 </header>

@@ -1,10 +1,16 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
     <header class="entry-header">
-        <h1>{{ .Title | markdownify }}</h1>
+        <h1 class="home-info-copy is-active" data-lang="zh">{{ .titleZh | markdownify }}</h1>
+        <h1 class="home-info-copy" data-lang="en">{{ .titleEn | markdownify }}</h1>
     </header>
     <div class="entry-content">
-        {{ .Content | markdownify }}
+        <div class="home-info-copy is-active" data-lang="zh">
+            {{ .contentZh | markdownify }}
+        </div>
+        <div class="home-info-copy" data-lang="en">
+            {{ .contentEn | markdownify }}
+        </div>
     </div>
     <footer class="entry-footer">
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}

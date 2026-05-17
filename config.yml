@@ -22,27 +22,17 @@ pagination:
   disableAliases: false
   pagerSize: 5
 
-languages:
-  en:
-    languageName: "English"
-    weight: 1
-    taxonomies:
-      category: categories
-      tag: tags
-      series: series
-    menu:
-      main:
-        - name: Archive
-          url: archives/
-          weight: 5
-        - name: Search
-          url: search/
-          weight: 10
-        - name: Tags
-          url: tags/
-          weight: 10
-        # - name: WiKi
-        #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+menu:
+  main:
+    - name: Archive
+      url: archives/
+      weight: 5
+    - name: Search
+      url: search/
+      weight: 10
+    - name: Tags
+      url: tags/
+      weight: 15
 
 outputFormats:
   llms:
@@ -60,7 +50,7 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  description: "Ruoying Tan's personal website"
   author: Ruoying Tan
 
   math: true
@@ -95,18 +85,23 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "About Me"
-    Content: >
-      #### 👋 Hey there!
+    titleZh: "关于我"
+    titleEn: "About Me"
+    contentZh: >
+      #### 🎓 教育经历
 
-      I'm Ruoying Tan. A passionate developer and graduate student dedicated to building efficient systems and exploring the frontiers of technology.
-
+      - **北京大学** | 软件与微电子学院 | 电子信息
+        - *工科硕士* | 2025 – 2028（预计）
+      - **北京邮电大学** | 计算机学院 | 计算机科学与技术
+        - *工科学士* | 2021 – 2025
+    contentEn: >
       #### 🎓 Education
 
-      - **Peking University (PKU)** | School of Software and Microelectronics
+      - **Peking University (PKU)** | School of Software and Microelectronics | Electronic Information
         - *Master of Engineering* | 2025 – 2028 (Expected)
-      - **Beijing University of Posts and Telecommunications (BUPT)** | School of Computer Science
+      - **Beijing University of Posts and Telecommunications (BUPT)** | School of Computer Science | Computer Science and Technology
         - *Bachelor of Engineering* | 2021 – 2025
+    defaultLang: "zh"
 
   socialIcons:
     - name: github
