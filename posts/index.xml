@@ -12,8 +12,17 @@
     <generator>Hugo -- 0.161.1</generator>
     <language>en</language>
     <copyright>PaperMod Contributors</copyright>
-    <lastBuildDate>Wed, 25 Feb 2026 21:44:13 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 09:19:44 +0800</lastBuildDate>
     <atom:link href="https://theudas.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Attention 机制</title>
+      <link>https://theudas.github.io/posts/attention/</link>
+      <pubDate>Sun, 17 May 2026 09:19:44 +0800</pubDate>
+      <guid>https://theudas.github.io/posts/attention/</guid>
+      <description>&lt;p&gt;Attention 机制简单来说就是给定 Q(Query), K(Key), V(Value)，通过 Query 和 Key 的匹配程度来决定从 Value 中提取多少信息(就是一个加权求和的过程)。这个可以参考数据库中的查询，根据查询键 Q 去匹配数据库中的键 K，找到对应的记录并取出该记录的值 V。Attention 机制与此类似，先通过 $ Q \cdot K^T $ 来计算相似度，由于$Q \cdot K^T$的结果是一个实数值向量，它的取值范围可能会很大，所以跟 V 相乘之前还需要先进行 softmax，softmax 会把它们归一化成一个和为 1 的概率分布，因此可以写成 $softmax(Q \cdot K^T) \cdot V$。不过 Transformer 的原论文&lt;a href=&#34;https://arxiv.org/abs/1706.03762&#34;&gt;《Attention Is All You Need》&lt;/a&gt;中还对$Q \cdot K^T$后的结果除了一个缩放因子$\sqrt{d_k}$，因为随着 $d_k$ 增大，点积的方差会变大，softmax 更容易饱和，导致梯度变小，而除以 $\sqrt{d_k}$ 可以避免这种饱和。由此可以得出最终的公式为 $Attention(Q,K,V)=softmax(\frac {Q \cdot K^T}{\sqrt{d_k}}) \cdot V$。由于加了“缩放因子”，所以这种Attention机制也叫&lt;strong&gt;Scaled Dot-Product Attention&lt;/strong&gt;机制。&lt;/p&gt;
+&lt;h2 id=&#34;self-attention-vs-cross-attention&#34;&gt;Self-Attention vs. Cross-Attention&lt;/h2&gt;
+&lt;p&gt;Self-Attention 之所以叫 &amp;ldquo;Self&amp;rdquo;，就是因为它的 Query、Key、Value 都是由同一个 x 分别通过不同的线性层（k_proj、q_proj、v_proj）来得到的。而 Cross-Attention 的 &amp;ldquo;Cross&amp;rdquo; 则是因为在 Transformer 中，它的 Key、Value 来自 Encoder 中的输出，而 Query 则是 Decoder 中的输入。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>不等式证明</title>
       <link>https://theudas.github.io/posts/mathematical-proof-problem-1/</link>
